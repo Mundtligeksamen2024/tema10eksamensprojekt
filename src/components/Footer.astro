@@ -1,47 +1,45 @@
 <footer>
   <div class="maxbredde">
-    <section id="second-section">
-      <h2>NYHEDSBREV</h2>
-      <p>
-        Hvis du ikke vil gå glip af de nyeste produkter og tilbud, så tilmeld
-        dig nyhedsbrevet.
-      </p>
 
-      <form action="">
-        <label for="fname"></label>
-        <input type="text" name="email" placeholder="Indtast din e-mail" />
-      </form>
-
-      <p class="knap">TILMELD</p>
-    </section>
-
-    <section id="first-section">
-      <article>
-        <h2>INFO</h2>
-        <p>Søg</p>
-        <p>Handelsbetingelser</p>
-        <p>Fragt & Levering</p>
-        <a
-          href="https://www.facebook.com/profile.php?id=100087733412713"
-          class="s"
-        >
-          <img src="/facebook.svg" alt="Facebook" class="icon" />
-        </a>
-        <a href="https://www.instagram.com/vahlwood/" class="s">
-          <img src="/instagram.svg" alt="Instagram" class="icon" />
-        </a>
-      </article>
-
-      <article>
-        <h2>KONTAKT</h2>
+    <section class="info">
+      <div>
+        <!-----<h2>KONTAKT</h2--- -->
         <h3>Vahl Wood</h3>
         <p>3480 Hillerød</p>
         <p>Danmark</p>
         <p>E-mail: Info@vahlwood.com</p>
         <p>Telefonnr. +45 60 14 80 49</p>
         <p>CVR / VAT number: 43342533</p>
-      </article>
+      </div>
+
+      <div>
+      <h3>Info</h3>
+      <p>Handelsbetingelser</p>
+      <p>Fragt & Levering</p>
+      </div>
     </section>
+
+
+    <section class="nyhedsbrev">
+        <div>
+          <h3>Nyhedsbrev</h3>
+          <p>
+            Hvis du ikke vil gå glip af de nyeste produkter og tilbud, <br> så tilmeld
+            dig nyhedsbrevet.
+          </p>
+        </div>
+  
+  
+        <div>
+          <form action="">
+            <label for="fname"></label>
+            <input type="text" name="email" placeholder="Indtast din e-mail" />
+          </form>
+    
+          <p class="knap">TILMELD</p>
+        </div>
+      </section>
+
   </div>
 </footer>
 
@@ -53,46 +51,26 @@
   .maxbredde {
     max-width: 1000px;
     margin-inline: auto;
-  }
-
-  input[type="text"],
-  select,
-  textarea {
-    padding: 15px;
-    width: 80%;
-    box-sizing: border-box;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    resize: vertical;
-    border-radius: 5px;
-  }
-
-  #first-section a img {
-    margin-top: 12px;
-  }
-
-  #first-section a:hover {
-    opacity: 80%;
-  }
-
-  #first-section {
+    padding: 20px;
+    margin-top: 2em;
+    margin-bottom: 2em;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-    margin-top: 3rem;
-    padding: 25px;
-    margin-bottom: 4rem;
+    grid-template-rows: 1fr 1fr;
   }
 
-  #second-section {
-    gap: 1rem;
-    margin-top: 3rem;
-    padding: 25px;
+  .nyhedsbrev{
+    margin-top: 2em;
+  }
+  .info{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 60px;
   }
 
-  h2 {
-    letter-spacing: 7px;
-    margin-bottom: 2rem;
+  input{
+    padding: 10px;
+    width: 13rem;
+    margin-top: 1em;
   }
   h3 {
     font-weight: 400;
@@ -101,9 +79,9 @@
   .knap {
     background-color: black;
     color: white;
-    padding: 1rem;
+    padding: 10px;
     width: 13rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     text-align: center;
   }
 
@@ -118,5 +96,33 @@
     .knap:hover {
       opacity: 70%;
     }
+
+    .nyhedsbrev{
+      margin-top: 1em;
+    display: grid;
+    margin-left: 7em;
+  }
+
+
+
+ 
+
+  }
+
+  @media screen and (min-width: 999px) {
+    .maxbredde{
+    display: flex;
+    justify-content: space-evenly;
+    }
+
+    .info{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 60px;
+  }
+
+  .nyhedsbrev{
+    margin-top: 0em;
+  }
   }
 </style>
