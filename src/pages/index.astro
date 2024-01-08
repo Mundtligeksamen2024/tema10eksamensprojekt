@@ -2,8 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import Kategori from "../components/Kategori.astro";
 import Video from "../components/Video.astro";
+import PopUpNewsLetter from "../components/PopUpNewsLetter.astro";
 
 import RodgivningOmVahlWood from "../components/RodgivningOmVahlWood.astro";
+import NewsLetterPopUp from "../components/NewsLetterPopUp.astro";
+
 
 const data = await fetch(
   "https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/kategori?select=*",
@@ -19,6 +22,7 @@ console.log(data);
 ---
 
 <Layout>
+  <PopUpNewsLetter/>
     <!-- alt det her er det der bliver til <slot /> i Layout.astro -->
     <Video slot="hero"/>
     <section class="kategori">

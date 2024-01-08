@@ -1,0 +1,108 @@
+<div class="popup">
+    <div class="background">
+        <form id="form">
+            <div>
+            <h2>VHAL WOOD</h2>
+            <p>Tilmeld dig nyhedsbrevet og spar 10% på din første ordre.</p>
+            <input type="email" name="email" id="email" placeholder="Indtast din e-mail">
+            <button class="rabat" id="submit-btn">Modtag rabat nu</button>
+            </div>
+
+            <button id="submit-btn" class="close">&times;</button>
+            <img src="/images/radiatorw.webp" alt="">
+        </form>
+    </div>
+</div>
+
+<style>
+    *,
+    *:before,
+    *:after{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    #form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .close{
+        position: absolute;
+    top: 1px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    }
+
+    .popup{
+        background-color: white;
+        width: 600px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        right: 50%;
+        text-align: center;
+        top: 30em;
+        display: none;
+    }
+
+
+
+    h1{
+        font-size: xx-large;
+    }
+
+    h2{
+        font-size: larger;
+        margin-top: 5em;
+    }
+
+    input{
+        padding: 10px;
+        width: 92%;
+        margin-top: 2em;
+    }
+
+    .rabat{
+        padding: 10px;
+        margin-top: 2em;
+        background-color: black;
+        color: white;
+    }
+
+
+
+
+
+</style>
+
+<script>
+    const newsletter = document.querySelector('.popup');
+    const newsform = document.getElementById('form');
+
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            newsletter.style.display = 'block';
+        }, 2000);
+        })
+
+        newsletter.addEventListener('click', (e) => {
+            if(e.target == newsletter){
+                newsletter.style.display = 'none';
+            }
+        });
+
+        newsform.addEventListener('submit', (e) =>{
+            e.preventDefault();
+
+            newsletter.style.display = 'none';
+        });
+</script>
