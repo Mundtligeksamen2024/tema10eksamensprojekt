@@ -5,7 +5,6 @@ import Video from "../components/Video.astro";
 import PopUpNewsLetter from "../components/PopUpNewsLetter.astro";
 
 import RodgivningOmVahlWood from "../components/RodgivningOmVahlWood.astro";
-import NewsLetterPopUp from "../components/NewsLetterPopUp.astro";
 
 
 const data = await fetch(
@@ -22,7 +21,6 @@ console.log(data);
 ---
 
 <Layout>
-  <PopUpNewsLetter/>
     <!-- alt det her er det der bliver til <slot /> i Layout.astro -->
     <Video slot="hero"/>
     <section class="kategori">
