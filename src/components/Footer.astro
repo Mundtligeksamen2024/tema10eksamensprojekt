@@ -1,5 +1,23 @@
 <footer>
   <div class="maxbredde">
+    <section class="nyhedsbrev">
+      <div>
+        <h3>Nyhedsbrev</h3>
+        <p>
+          Hvis du ikke vil gå glip af de nyeste produkter <br> og tilbud, så tilmeld dig nyhedsbrevet.
+        </p>
+      </div>
+
+
+      <div>
+        <form action="">
+          <label for="fname"></label>
+          <input type="text" name="email" placeholder="Indtast din e-mail" />
+        </form>
+  
+        <p class="knap">TILMELD</p>
+      </div>
+    </section>
 
     <section class="info">
       <div>
@@ -18,27 +36,6 @@
       <p>Fragt & Levering</p>
       </div>
     </section>
-
-
-    <section class="nyhedsbrev">
-        <div>
-          <h3>Nyhedsbrev</h3>
-          <p>
-            Hvis du ikke vil gå glip af de nyeste produkter og tilbud, <br> så tilmeld
-            dig nyhedsbrevet.
-          </p>
-        </div>
-  
-  
-        <div>
-          <form action="">
-            <label for="fname"></label>
-            <input type="text" name="email" placeholder="Indtast din e-mail" />
-          </form>
-    
-          <p class="knap">TILMELD</p>
-        </div>
-      </section>
 
   </div>
 </footer>
@@ -60,12 +57,12 @@
   }
 
   .nyhedsbrev{
-    margin-top: 2em;
+    margin-bottom: 4em;
   }
   .info{
     display: flex;
     justify-content: space-evenly;
-    gap: 60px;
+    gap: 35px;
   }
 
   input{
@@ -99,31 +96,38 @@
     }
 
     .nyhedsbrev{
-      margin-top: 1em;
-    display: grid;
-    margin-left: 7em;
+      display: grid;
+      margin-left: 5.2em;
+      margin-bottom: 4em;
   }
 
+    .maxbredde{
+      padding: 0;
+      height: 0;
+    }
 
-
- 
-
+    .info{
+      display: flex;
+      justify-content: space-around;
+  }
   }
 
   @media screen and (min-width: 999px) {
     .maxbredde{
-    display: flex;
-    justify-content: space-evenly;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 0;
+      height: 0;
     }
 
     .info{
-    display: flex;
-    justify-content: space-evenly;
-    gap: 60px;
+      display: flex;
+    justify-content: flex-start;
   }
 
   .nyhedsbrev{
     margin-top: 0em;
+    margin-left: 2.2em;
   }
   }
 </style>
