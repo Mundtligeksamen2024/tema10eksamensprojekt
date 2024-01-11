@@ -100,7 +100,7 @@
     position: fixed;
     top: 0; /* vigtig */
     right: 100%; /* hvor meget af skærmen den fylder. jo mindre procent jo mere kan den ses på skærmen */
-    width: 100%; /* hvor meget boksen fylder */
+    width: 86%; /* hvor meget boksen fylder */
     min-height: 100vh; /* hvis man fjerner denne, så fylder den ikke hele skærmen */
     display: block; 
     z-index: 98;
@@ -141,16 +141,17 @@
 @media screen and (min-width:599px) {
 
   .open-menu.is-active {
-    right: 24em;
+    right: 22em;
   }
 
   .open-menu {
-    width: 54%;
+    width: 49%;
   }
 
   .open-menu a{
     font-size: x-large;
     margin-left: 1em;
+    width: 11em;
   }
   
 }
@@ -164,6 +165,10 @@
 
   .open-menu {
     width: 23%;
+  }
+
+  .open-menu a {
+    width: 13em;
   }
   
 }
